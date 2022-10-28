@@ -10,5 +10,4 @@ Here are a few things to check out
 * Blog
 * GitHub
 * GitLab
-* Tamil BSI bible
 * Contact
