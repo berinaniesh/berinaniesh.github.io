@@ -14,5 +14,5 @@ Here are a few things to check out
 * [Blog](blog)
 * [Tips](tips)
 * [GitHub](https://github.com/berinaniesh/)
-* [Other people to check out](links)
+* [Awesome](awesome)
 * [Contact](contact)
