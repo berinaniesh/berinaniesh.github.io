@@ -4,10 +4,13 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
+
+{{ section.content | safe }}
+
 <ul>
   <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>{{ page.date }}
   {% endfor %}
 </ul>
 {% endblock content %}
