@@ -72,7 +72,7 @@ Now we have everything we need to install Arch Linux. Go to the [Arch Linux inst
 
 For the people who are familiar with the process and just want a quick glance at the steps, I am going to give the commands directly here itself, but remember, these will not be detailed or updated as the wiki. Always use the wiki to install Arch Linux and never follow any third party's resource. Having said that, here are the commands / steps to get things up and running. 
 
-[I know to install, skip to installation](#conclusion)
+[I know to install, skip past installation](#conclusion)
 
 ## Installing Arch Linux
 
@@ -201,12 +201,12 @@ And that's it. You have a functional Arch Linux Installation ready.
 
 Like any method, this is not perfect (but close to perfect, according to me)
 
-* First `dnf` run takes a long time. It is so annoying to look at `dnf` downloading the databases at 30KB/s. I am not sure if it's a bug, but I hope Fedora devs do something about this. 
+* First `dnf` run takes a long time. It is so annoying to look at `dnf` downloading the databases at 30KB/s. I am not sure if it's a bug or if it is due to slow mirrors, but the experience is consistently slow. I hope the Fedora devs do something about this. 
 
 * `genfstab` adds a `zram` entry in Fedora. We have to manually remove the entry.
 
 ## Conclusion
 
-This article is meant to supplement the Arch Wiki. Refer the Arch Wiki exclusively for installation steps. 
+This article is meant to supplement [this page](https://wiki.archlinux.org/title/Install_Arch_Linux_from_existing_Linux) of the Arch Wiki. Refer the Arch Wiki's installation guide exclusively for installation steps. 
 
 Hope you learnt something useful. If you have any feedback, send an [email](mailto://berinaniesh@gmail.com). You can also submit pull requests to the [github repo of this website](https://github.com/berinaniesh/berinaniesh.github.io). Have a good one. Cheers!
