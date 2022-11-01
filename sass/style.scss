@@ -1,4 +1,5 @@
 $base-color: #2b303b;
+$contrast-color: #c0c5ce;
 
 .container {
   font-family: sans-serif;
@@ -19,16 +20,28 @@ a {
 }
 
 a:hover {
-  //background-color: #5c4fbd;
+  background-color: $base-color;
+  color: $contrast-color;
 }
 
 code {
   font-family: "Cascadia Code", "Fira Code", monospace;
   background-color: #eee;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
 }
 
 span {
   background-color: #2b303b;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 pre {
