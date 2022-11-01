@@ -88,9 +88,7 @@
 </li>
 </ul>
 <h3 id="pacstrap">Pacstrap</h3>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacstrap -K /mnt base base-devel linux-zen linux-firmware
-</span><span> linux-zen-headers networkmanager neovim man-db man-pages
-</span><span> texinfo tldr git gnome gnome-extra fish amd-ucode reflector
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacstrap -K /mnt base base-devel linux-zen linux-firmware linux-zen-headers networkmanager neovim man-db man-pages texinfo tldr git gnome gnome-extra fish amd-ucode reflector
 </span></code></pre>
 <p>The <code>-K</code> option initializes a new keyring. Substitute your prefered window manager or DE in place of <code>gnome</code> and <code>gnome-extra</code> and <code>intel-ucode</code> in place of <code>amd-ucode</code> for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, </p>
 <h3 id="fstab">Fstab</h3>
@@ -103,11 +101,14 @@
 </span></code></pre>
 <h3 id="time-zone-and-time">Time zone and time</h3>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+</span><span>
 </span><span>hwclock --systohc
 </span></code></pre>
 <h3 id="localization">Localization</h3>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>echo &quot;en_US.UTF-8 UTF-8&quot; &gt;&gt; /etc/locale.gen
+</span><span>
 </span><span>locale-gen
+</span><span>
 </span><span>echo &quot;LANG=en_US.UTF-8&quot; &gt;&gt; /etc/locale.conf
 </span></code></pre>
 <h3 id="hostname">Hostname</h3>
@@ -121,24 +122,30 @@
 </span></code></pre>
 <h3 id="user-accounts">User accounts</h3>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>passwd
+</span><span>
 </span><span>useradd -m -G wheel -s /usr/bin/fish -C &quot;Bobby&quot; bobby
+</span><span>
 </span><span>passwd bobby
+</span><span>
 </span><span>EDITOR=vim visudo // add bobby to sudoers
 </span></code></pre>
 <h3 id="network-manager">Network Manager</h3>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>systemctl enable NetworkManager
+</span><span>
 </span><span>systemctl enable gdm // if gnome is installed
 </span></code></pre>
 <h3 id="bootloader">Bootloader</h3>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>bootctl install
+</span><span>
 </span><span>systemctl enable systemd-boot-update
 </span></code></pre>
 <p>You have to create config files for systemd boot. Check the <a href="https://wiki.archlinux.org/title/systemd-boot">arch wiki page</a> for details. </p>
 <h4 id="grub">GRUB</h4>
 <p>To take the easier route, install grub. </p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacman -S grub --noconfirm
-</span><span>grub-install --target=x86_64-efi --efi-directory=esp
-</span><span> --bootloader-id=GRUB
+</span><span>
+</span><span>grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+</span><span>
 </span><span>grub-mkconfig -o /boot/grub/grub.cfg
 </span></code></pre>
 <h3 id="pacman-conf-and-makepkg-conf">pacman.conf and makepkg.conf</h3>
@@ -155,7 +162,9 @@
 </span></code></pre>
 <p>If not</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>git clone https://aur.archlinux.org/yay.git
+</span><span>
 </span><span>cd yay
+</span><span>
 </span><span>makepkg -si
 </span></code></pre>
 <p>And that's it. You have a functional Arch Linux Installation ready. </p>

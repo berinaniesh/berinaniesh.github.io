@@ -86,9 +86,7 @@ For the people who are familiar with the process and just want a quick glance at
 
 ### Pacstrap
 ```
-pacstrap -K /mnt base base-devel linux-zen linux-firmware
- linux-zen-headers networkmanager neovim man-db man-pages
- texinfo tldr git gnome gnome-extra fish amd-ucode reflector
+pacstrap -K /mnt base base-devel linux-zen linux-firmware linux-zen-headers networkmanager neovim man-db man-pages texinfo tldr git gnome gnome-extra fish amd-ucode reflector
 ```
 
 The `-K` option initializes a new keyring. Substitute your prefered window manager or DE in place of `gnome` and `gnome-extra` and `intel-ucode` in place of `amd-ucode` for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, 
@@ -107,12 +105,15 @@ arch-chroot /mnt
 ### Time zone and time
 ```
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+
 hwclock --systohc
 ```
 ### Localization
 ```
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+
 locale-gen
+
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 ```
 ### Hostname
@@ -130,18 +131,23 @@ mkinitcpio -P
 ### User accounts
 ```
 passwd
+
 useradd -m -G wheel -s /usr/bin/fish -C "Bobby" bobby
+
 passwd bobby
+
 EDITOR=vim visudo // add bobby to sudoers
 ```
 ### Network Manager
 ```
 systemctl enable NetworkManager
+
 systemctl enable gdm // if gnome is installed
 ```
 ### Bootloader
 ```
 bootctl install
+
 systemctl enable systemd-boot-update
 ```
 You have to create config files for systemd boot. Check the [arch wiki page](https://wiki.archlinux.org/title/systemd-boot) for details. 
@@ -150,8 +156,9 @@ You have to create config files for systemd boot. Check the [arch wiki page](htt
 To take the easier route, install grub. 
 ```
 pacman -S grub --noconfirm
-grub-install --target=x86_64-efi --efi-directory=esp
- --bootloader-id=GRUB
+
+grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -180,7 +187,9 @@ sudo pacman -Syu yay
 If not
 ```
 git clone https://aur.archlinux.org/yay.git
+
 cd yay
+
 makepkg -si
 ```
 
