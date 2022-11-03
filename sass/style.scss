@@ -51,3 +51,13 @@ pre {
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+footer {
+  bottom: 0;
+  color: $base-color;
+  font-family: sans-serif;
+  margin: 40px auto;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
