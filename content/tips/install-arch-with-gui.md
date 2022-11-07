@@ -37,7 +37,7 @@ There are many great projects who try to give you a smooth experience, providing
 * I am sure the people who wrote those installers are good engineers but, the quality of engineering can't be guaranteed in third party installers. 
 
 <a name="crux"></a>
-## How can we solve our problem
+## Solving our "Problem"
 
 Installing Arch Linux from the command line is not a hard work to do. You partition, mount drives, run pacstrap, create fstab, set time zone and locale, setup bootloader, create user, enable necessary services and reboot. 
 

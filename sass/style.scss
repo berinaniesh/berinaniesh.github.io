@@ -4,7 +4,7 @@ $contrast-color: #c0c5ce;
 .container {
   font-family: sans-serif;
   margin: 40px auto;
-  max-width: 650px;
+  max-width: 800px;
   font-size: 18px;
   padding: 0 10px;
   line-height: 1.6;
@@ -45,11 +45,12 @@ span {
 }
 
 pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  padding: 0.5em;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 footer {
