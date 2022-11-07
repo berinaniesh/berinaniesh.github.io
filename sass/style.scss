@@ -2,7 +2,7 @@ $base-color: #2b303b;
 $contrast-color: #c0c5ce;
 
 .container {
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   margin: 40px auto;
   max-width: 800px;
   font-size: 18px;
@@ -56,7 +56,7 @@ pre {
 footer {
   bottom: 0;
   color: $base-color;
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   margin: 40px auto;
   line-height: 1.6;
   max-width: 650px;
