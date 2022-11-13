@@ -62,10 +62,10 @@ Boot the ISO and you have a working Desktop Environment and a Browser.
 
 You don't have to mess with the command line to connect to the internet through WiFi or mobile tethering. Fedora ISO when booted will have `NetworkManager` running and use your DE's interface to connect to your network.
 
-Now install `gparted`, `pacman` and `arch-install-scripts` using 
+`gparted` is not present in the default ISO and all required executables like `pacman`, `libalpm` etc are dependencies of `arch-install-scripts`. So, install `gparted` and `arch-install-scripts` using 
 
 ```
-sudo dnf install gparted pacman arch-install-scripts
+sudo dnf install gparted arch-install-scripts
 ```
 
 Now we have everything we need to install Arch Linux. Go to the [Arch Linux installation Guide](https://wiki.archlinux.org/title/installation_guide), read the wiki thoroughly and set up your Arch Linux the very way you want. 
@@ -86,10 +86,10 @@ For the people who are familiar with the process and just want a quick glance at
 
 ### Pacstrap
 ```
-pacstrap -K /mnt base base-devel linux-zen linux-firmware linux-zen-headers networkmanager neovim man-db man-pages texinfo tldr git gnome gnome-extra fish amd-ucode reflector
+pacstrap -K /mnt base base-devel linux-zen linux-firmware networkmanager neovim man-db man-pages texinfo tldr gnome gnome-extra fish amd-ucode reflector
 ```
 
-The `-K` option initializes a new keyring. Substitute your prefered window manager or DE in place of `gnome` and `gnome-extra` and `intel-ucode` in place of `amd-ucode` for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, 
+The `-K` option initializes a new keyring. -K is infact not necessary as we don't have a pacman keyring in our live Fedora ISO. Substitute your prefered window manager or DE in place of `gnome` and `gnome-extra` and `intel-ucode` in place of `amd-ucode` for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, 
 
 ### Fstab
 ```
@@ -123,6 +123,7 @@ echo "Billy" >> /etc/hostname
 Thanks to [Mutahar](https://www.youtube.com/c/SomeOrdinaryGamers) for the name Billy. 
 
 You can also set the hostname using systemd. Check Arch Wiki to know how to do that. 
+
 ### Initramfs
 Add necessary modules, hooks, binaries to `/etc/mkinitcpio.conf`. I like setting the compression to `cat` or `lz4` for fast decompression of initramfs. 
 ```
@@ -193,7 +194,7 @@ cd yay
 makepkg -si
 ```
 
-And that's it. You have a functional Arch Linux Installation ready. 
+And that's it. You have a functional Arch Linux setup ready. 
 
 <a name="conclusion"></a>
 
@@ -201,8 +202,7 @@ And that's it. You have a functional Arch Linux Installation ready.
 
 Like any method, this is not perfect (but close to perfect, according to me)
 
-* First `dnf` run takes a long time. It is so annoying to look at `dnf` downloading the databases at 30KB/s. I am not sure if it's a bug or if it is due to slow mirrors, but the experience is consistently slow. I hope the Fedora devs do something about this. 
-
+* First `dnf` run takes a long time on all Fedora systems as dnf downloads all the package databases. Nothing much we can do in our live ISO. 
 * `genfstab` adds a `zram` entry in Fedora. We have to manually remove the entry.
 
 ## Conclusion
