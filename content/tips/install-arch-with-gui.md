@@ -80,7 +80,7 @@ For the people who are familiar with the process and just want a quick glance at
 
 * Mount the partitions of ESP, boot, and other disks/partitions/filesystems at their respective places.  
 
-* Set the number of parallel downloads to 8 (eight) in `/etc/pacman.conf` (This file appears once you install pacman using dnf on the live ISO)
+* Set the number of parallel downloads to 8 (eight) in `/etc/pacman.conf` (This file appears once you install pacman using dnf on the live ISO). Also, modern versions of `arch-install-scripts` might have this set to 4 already. 
 
 * The default mirrors were fast enough for me, if it is not for you, edit the mirrorlist and use some local mirrors. 
 
