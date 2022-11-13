@@ -62,10 +62,16 @@ Boot the ISO and you have a working Desktop Environment and a Browser.
 
 You don't have to mess with the command line to connect to the internet through WiFi or mobile tethering. Fedora ISO when booted will have `NetworkManager` running and use your DE's interface to connect to your network.
 
-`gparted` is not present in the default ISO and all required executables like `pacman`, `libalpm` etc are dependencies of `arch-install-scripts`. So, install `gparted` and `arch-install-scripts` using 
+`gparted` is not present in the default ISO and all required executables and libraries like `pacman`, `libalpm` etc are dependencies of `arch-install-scripts`. So, install `gparted` and `arch-install-scripts` using 
 
 ```
 sudo dnf install gparted arch-install-scripts
+```
+We also have to initialize the pacman keyring to install packages using pacman. So, run
+```
+pacman-key --init
+
+pacman-key --refresh-keys
 ```
 
 Now we have everything we need to install Arch Linux. Go to the [Arch Linux installation Guide](https://wiki.archlinux.org/title/installation_guide), read the wiki thoroughly and set up your Arch Linux the very way you want. 
@@ -80,16 +86,16 @@ For the people who are familiar with the process and just want a quick glance at
 
 * Mount the partitions of ESP, boot, and other disks/partitions/filesystems at their respective places.  
 
-* Set the number of parallel downloads to 8 (eight) in `/etc/pacman.conf` (This file appears once you install pacman using dnf on the live ISO). Also, modern versions of `arch-install-scripts` might have this set to 4 already. 
+* Set the number of parallel downloads to 8 (eight) in `/etc/pacman.conf` (This file appears once you install pacman using dnf on the live ISO). Also, modern versions of `arch-install-scripts` might have this set to 5 already. 
 
 * The default mirrors were fast enough for me, if it is not for you, edit the mirrorlist and use some local mirrors. 
 
 ### Pacstrap
 ```
-pacstrap -K /mnt base base-devel linux-zen linux-firmware networkmanager neovim man-db man-pages texinfo tldr gnome gnome-extra fish amd-ucode reflector
+pacstrap /mnt base base-devel linux-zen linux-firmware networkmanager neovim man-db man-pages texinfo tldr gnome gnome-extra fish amd-ucode reflector
 ```
 
-The `-K` option initializes a new keyring. -K is infact not necessary as we don't have a pacman keyring in our live Fedora ISO. Substitute your prefered window manager or DE in place of `gnome` and `gnome-extra` and `intel-ucode` in place of `amd-ucode` for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, 
+The `-K` option initializes a new keyring, which is recommended by the arch wiki. But it is not included here because, we want the keys to be copied from the host system (the live environment we are in), because we initialized the keyring and refreshed the keys just now. Substitute your prefered window manager or DE in place of `gnome` and `gnome-extra` and `intel-ucode` in place of `amd-ucode` for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, 
 
 ### Fstab
 ```
@@ -204,6 +210,7 @@ Like any method, this is not perfect (but close to perfect, according to me)
 
 * First `dnf` run takes a long time on all Fedora systems as dnf downloads all the package databases. Nothing much we can do in our live ISO. 
 * `genfstab` adds a `zram` entry in Fedora. We have to manually remove the entry.
+* Sometimes, due to old version of `arch-install-scripts` or some other bug, the signature verification of some or all of the downloaded files fail, we may temporarily set `SigLevel` not to check and get around this, but it is not recommended. Also remember that pacstrap deletes downloaded files without confirmation if signature verification fails. 
 
 ## Conclusion
 
