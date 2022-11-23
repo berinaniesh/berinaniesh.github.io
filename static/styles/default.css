@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400italic,400);
+
+/* LAYOUT */
+
+.rendered-content {
+  max-width: 50rem;
+  display: inline-block;
+  margin-left: 17rem;
+}
+
+#tocMenu {
+  position: fixed;
+  max-width: 17rem;
+}
+
+@media (max-width: 50rem), (orientation: portrait) {
+  html {
+    font-size: 1em !important;
+  }
+  .rendered-content {
+    max-width: none;
+    margin: 2rem;
+  }
+  #tocMenu {
+    display: none;
+  }
+}
+
+/* FONTS */
+/* http://type-scale.com/?size=18&scale=1.333&text=A%20Visual%20Type%20Scale&webfont=Merriweather&font-family='Merriweather'%2C%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333 */
+
+html {font-size: 1.125em;}
+
+body {
+  background-color: white;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #444;
+  margin: 4rem 1rem;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1:first-child {margin-top: 0.5rem;}
+
+h1 {font-size: 3.157em;}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+a,
+a:visited {
+  color: #3498db;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #2980b9;
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* CUSTOM */
+pre,
+code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
+
+blockquote p {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 1em auto 1em;
+  color: #666;
+}
