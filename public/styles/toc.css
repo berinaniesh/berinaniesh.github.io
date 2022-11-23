@@ -1,0 +1,35 @@
+
+#tocMenu * {
+    font-size: 1rem;
+    color: #777;
+}
+
+#tocMenu li.active {
+    color: #333;
+    font-weight: bold;
+}
+
+#tocMenu li:hover {
+    color: #444;
+    cursor: pointer;
+}
+
+#tocMenu ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+/* Collapsing */
+
+#tocMenu > ul ul {
+	display: none;
+}
+
+#tocMenu ul.active {
+	display: block;
+}
+
+#tocMenu li.active + ul {
+	display: block;
+}
