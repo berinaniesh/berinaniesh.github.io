@@ -13,6 +13,7 @@ Here are a few things to check out
 * [About](about)
 * [Blog](blog)
 * [Tips](tips)
+* [Projects](projects)
 * [GitHub](https://github.com/berinaniesh/)
 * [Awesome](awesome)
 * [Contact](contact)
