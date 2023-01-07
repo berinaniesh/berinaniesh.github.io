@@ -10,4 +10,4 @@ I have a Master's degree in Nuclear Engineering (where I worked in Reactor Kinet
 
 My other areas of interests include Chess engines, AOSP and Machine learning on music. I am comfortable with Linux and Python and I am familiar with Rust and C++. 
 
-For further details, check my [resume](resume-berin.pdf)
+For further details, check my [resume](https://github.com/berinaniesh/resume/blob/main/resume.pdf)
