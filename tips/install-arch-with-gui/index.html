@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Cascadia+Code|Fira+Code">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Berin's Webpage</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Installing Arch Linux with a GUI
+</h1>
+<p class="subtitle"><strong>2022-11-01</strong></p>
+<p><a href="https://berinaniesh.github.io/tips/install-arch-with-gui/#crux">Skip to crux</a></p>
+<p>Arch Linux is a work of art, no doubts whatsoever. But one of the most annoying parts of it is that you have no GUI when installing it. Here, I share a useful trick to make our lives a little bit easier. </p>
+<h2 id="why-need-a-gui">Why need a GUI</h2>
+<p>There are linux aficionados who question &quot;Why need a GUI? You can do everything in the command line&quot; and etc. First of all, TTY is different than the command line and most of us don't know to do many stuff on the TTY. A GUI is more comfortable and that is the whole reason GUI is invented. Having a GUI (especially a browser) is handy many a times. Maybe</p>
+<ul>
+<li>You want to click on things to connect to WiFi rather fiddling with <code>iwctl</code>.</li>
+<li>You are setting up raid and you would like to read the arch wiki in your PC's browser, copy commands rather reading on the phone and typing it out. </li>
+<li>You have to copy the blkid of some block device to a config file. (How do you copy text from TTY anyways, I used to painstakingly write the blkid on a piece of paper, type it out before) </li>
+<li>You prefer to partition using gparted than parted or cgdisk. </li>
+<li>You want to watch your favourite dog videos or listen to music on YouTube, Spotify, etc. while it installs. </li>
+</ul>
+<p>Or a thousand other reasons.</p>
+<p>I have had conversations with some of the Arch Linux team members and they seem to have aversion towards any kind of GUI in the default ISO, which I don't understand to be honest. </p>
+<h2 id="existing-options">Existing Options</h2>
+<p>There are many great projects who try to give you a smooth experience, providing GUIs or guided installers. A few of them are </p>
+<ul>
+<li><a href="https://github.com/archlinux/archinstall">archinstall</a></li>
+<li><a href="https://alci.online/">Arch Linux Calamares Installer</a></li>
+<li><a href="https://archlinuxgui.in/">Arch Linux GUI</a> - Discontinued</li>
+<li><a href="https://github.com/MatMoul/archfi">archfi</a></li>
+</ul>
+<h3 id="problems-with-the-existing-options">Problems with the existing options</h3>
+<ul>
+<li>
+<p>If the project is not officially supported, we have to rely on third parties to keep their scripts and installers up to date which many times they don't.</p>
+</li>
+<li>
+<p>Using install scripts is generally frowned upon in the Arch Linux Community and in their chat groups, you are pushed away if you use any install scripts other than archinstall. So, no getting help.</p>
+</li>
+<li>
+<p>I am sure the people who wrote those installers are good engineers but, the quality of engineering can't be guaranteed in third party installers. </p>
+</li>
+</ul>
+<p><a name="crux"></a></p>
+<h2 id="solving-our-problem">Solving our &quot;Problem&quot;</h2>
+<p>Installing Arch Linux from the command line is not a hard work to do. You partition, mount drives, run pacstrap, create fstab, set time zone and locale, setup bootloader, create user, enable necessary services and reboot. </p>
+<p>Most people are comfortable following instructions from the arch wiki, typing it out on the command line. But, where do you read the arch wiki? On your phone? pfft. Having a GUI during install is more of a quality of life improvement (Atleast for me). I can install arch from the command line following the installation guide, but let me type everything in a fancy terminal like gnome-terminal or alacritty rather than the TTY.</p>
+<h2 id="solution">Solution</h2>
+<p>Based on our previous arguement, all we need for a comfortable installation is a GUI (Window manager or DE) to have multiple windows open, a terminal (gnome-terminal or alacritty), a web browser, gparted and the package <code>arch-install-scripts</code> which contains the commands <code>pacman</code>, <code>pacstrap</code>, <code>genfstab</code>, and <code>arch-chroot</code> which does the install for us.</p>
+<p>In my experience, the easiest way to get all these is the <strong>Fedora ISO</strong>.</p>
+<h3 id="fedora-iso">Fedora ISO</h3>
+<p>Fedora is one of the few distributions which include <code>pacman</code> and <code>arch-install-scripts</code> in their official repositories. </p>
+<p>Go to the <a href="https://getfedora.org">Fedora website</a> and download whichever flavour you like (Gnome, KDE, Mate, etc). Create a bootable USB with tool of your choice (rufus, ventoy, or dd). </p>
+<p>Before booting into the Fedora ISO, assuming you want to dual boot Windows with Arch Linux, go to <a href="https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows">this Arch Wiki page</a> and follow instructions there to make Windows use UTC for hardware time. </p>
+<p>Boot the ISO and you have a working Desktop Environment and a Browser. </p>
+<p>You don't have to mess with the command line to connect to the internet through WiFi or mobile tethering. Fedora ISO when booted will have <code>NetworkManager</code> running and use your DE's interface to connect to your network.</p>
+<p><code>gparted</code> is not present in the default ISO and all required executables and libraries like <code>pacman</code>, <code>libalpm</code> etc are dependencies of <code>arch-install-scripts</code>. So, install <code>gparted</code> and <code>arch-install-scripts</code> using </p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>sudo dnf install gparted arch-install-scripts
+</span></code></pre>
+<p>We also have to initialize the pacman keyring to install packages using pacman. So, run</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacman-key --init
+</span><span>
+</span><span>pacman-key --refresh-keys
+</span></code></pre>
+<p>Now we have everything we need to install Arch Linux. Go to the <a href="https://wiki.archlinux.org/title/installation_guide">Arch Linux installation Guide</a>, read the wiki thoroughly and set up your Arch Linux the very way you want. </p>
+<p>For the people who are familiar with the process and just want a quick glance at the steps, I am going to give the commands directly here itself, but remember, these will not be detailed or updated as the wiki. Always use the wiki to install Arch Linux and never follow any third party's resource. Having said that, here are the commands / steps to get things up and running. </p>
+<p><a href="https://berinaniesh.github.io/tips/install-arch-with-gui/#conclusion">I know to install, skip past installation</a></p>
+<h2 id="installing-arch-linux">Installing Arch Linux</h2>
+<ul>
+<li>
+<p>Partition your hard disks the way you want, set up raids, filesystems, lvm, dmcrypt or whatever you need and mount the root of the new installation at <code>/mnt/</code>. </p>
+</li>
+<li>
+<p>Mount the partitions of ESP, boot, and other disks/partitions/filesystems at their respective places.</p>
+</li>
+<li>
+<p>Set the number of parallel downloads to 8 (eight) in <code>/etc/pacman.conf</code> (This file appears once you install pacman using dnf on the live ISO). Also, modern versions of <code>arch-install-scripts</code> might have this set to 5 already. </p>
+</li>
+<li>
+<p>The default mirrors were fast enough for me, if it is not for you, edit the mirrorlist and use some local mirrors. </p>
+</li>
+</ul>
+<h3 id="pacstrap">Pacstrap</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacstrap /mnt base base-devel linux-zen linux-firmware networkmanager neovim man-db man-pages texinfo tldr gnome gnome-extra fish amd-ucode reflector
+</span></code></pre>
+<p>The <code>-K</code> option initializes a new keyring, which is recommended by the arch wiki. But it is not included here because, we want the keys to be copied from the host system (the live environment we are in), because we initialized the keyring and refreshed the keys just now. Substitute your prefered window manager or DE in place of <code>gnome</code> and <code>gnome-extra</code> and <code>intel-ucode</code> in place of <code>amd-ucode</code> for intel systems. Add packages for your fancy raid or lvm setups. Fish shell for a user friendly shell. Once it completes, </p>
+<h3 id="fstab">Fstab</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></code></pre>
+<h4 id="important">Important</h4>
+<p><em>When <code>genfstab</code> is run from the Fedora ISO, it creates an entry for zram swap as well, which doesn't work in Arch Linux out of the box (It needs manual setup). This will stop you from booting. So, make sure you remove the zram entry from the fstab file (<code>/mnt/etc/fstab</code>).</em></p>
+<h3 id="chroot">Chroot</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>arch-chroot /mnt
+</span></code></pre>
+<h3 id="time-zone-and-time">Time zone and time</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+</span><span>
+</span><span>hwclock --systohc
+</span></code></pre>
+<h3 id="localization">Localization</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>echo &quot;en_US.UTF-8 UTF-8&quot; &gt;&gt; /etc/locale.gen
+</span><span>
+</span><span>locale-gen
+</span><span>
+</span><span>echo &quot;LANG=en_US.UTF-8&quot; &gt;&gt; /etc/locale.conf
+</span></code></pre>
+<h3 id="hostname">Hostname</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>echo &quot;Billy&quot; &gt;&gt; /etc/hostname
+</span></code></pre>
+<p>Thanks to <a href="https://www.youtube.com/c/SomeOrdinaryGamers">Mutahar</a> for the name Billy. </p>
+<p>You can also set the hostname using systemd. Check Arch Wiki to know how to do that. </p>
+<h3 id="initramfs">Initramfs</h3>
+<p>Add necessary modules, hooks, binaries to <code>/etc/mkinitcpio.conf</code>. I like setting the compression to <code>cat</code> or <code>lz4</code> for fast decompression of initramfs. </p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>mkinitcpio -P
+</span></code></pre>
+<h3 id="user-accounts">User accounts</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>passwd
+</span><span>
+</span><span>useradd -m -G wheel -s /usr/bin/fish -C &quot;Bobby&quot; bobby
+</span><span>
+</span><span>passwd bobby
+</span><span>
+</span><span>EDITOR=vim visudo // add bobby to sudoers
+</span></code></pre>
+<h3 id="network-manager">Network Manager</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>systemctl enable NetworkManager
+</span><span>
+</span><span>systemctl enable gdm // if gnome is installed
+</span></code></pre>
+<h3 id="bootloader">Bootloader</h3>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>bootctl install
+</span><span>
+</span><span>systemctl enable systemd-boot-update
+</span></code></pre>
+<p>You have to create config files for systemd boot. Check the <a href="https://wiki.archlinux.org/title/systemd-boot">arch wiki page</a> for details. </p>
+<h4 id="grub">GRUB</h4>
+<p>To take the easier route, install grub. </p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pacman -S grub --noconfirm
+</span><span>
+</span><span>grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+</span><span>
+</span><span>grub-mkconfig -o /boot/grub/grub.cfg
+</span></code></pre>
+<h3 id="pacman-conf-and-makepkg-conf">pacman.conf and makepkg.conf</h3>
+<p>Uncomment the <code>MAKEOPTS</code> flag in <code>/etc/makepkg.conf</code> and set its value to <code>$(nproc)</code>.</p>
+<p>See parallel downloads are set in <code>/etc/pacman.conf</code></p>
+<p>Enable <a href="https://wiki.archlinux.org/title/official_repositories#multilib">multilib</a> if needed</p>
+<p>Enable <a href="https://aur.chaotic.cx/">chaotic-aur</a> if needed</p>
+<p>Reboot.</p>
+<h2 id="post-installation">Post Installation</h2>
+<p>You will be greeted with GDM's greeter. Login with bobby's password and open a terminal. </p>
+<h3 id="aur">AUR</h3>
+<p>If chaotic-aur is enabled, simply install yay with </p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>sudo pacman -Syu yay 
+</span></code></pre>
+<p>If not</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>git clone https://aur.archlinux.org/yay.git
+</span><span>
+</span><span>cd yay
+</span><span>
+</span><span>makepkg -si
+</span></code></pre>
+<p>And that's it. You have a functional Arch Linux setup ready. </p>
+<p><a name="conclusion"></a></p>
+<h2 id="shortcomings-of-this-method">Shortcomings of this method</h2>
+<p>Like any method, this is not perfect (but close to perfect, according to me)</p>
+<ul>
+<li>First <code>dnf</code> run takes a long time on all Fedora systems as dnf downloads all the package databases. Nothing much we can do in our live ISO. </li>
+<li><code>genfstab</code> adds a <code>zram</code> entry in Fedora. We have to manually remove the entry.</li>
+<li>Sometimes, due to old version of <code>arch-install-scripts</code> or some other bug, the signature verification of some or all of the downloaded files fail, we may temporarily set <code>SigLevel</code> not to check and get around this, but it is not recommended. Also remember that pacstrap deletes downloaded files without confirmation if signature verification fails. </li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This article is meant to supplement <a href="https://wiki.archlinux.org/title/Install_Arch_Linux_from_existing_Linux">this page</a> of the Arch Wiki. Refer the Arch Wiki's installation guide exclusively for installation steps. </p>
+<p>Hope you learnt something useful. If you have any feedback, send an <a href="mailto://berinaniesh@gmail.com">email</a>. You can also submit pull requests to the <a href="https://github.com/berinaniesh/berinaniesh.github.io">github repo of this website</a>. Have a good one. Cheers!</p>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
