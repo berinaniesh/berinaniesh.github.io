@@ -1,0 +1,102 @@
+baseURL = "https://berinaniesh.github.io"
+languageCode = "en-us"
+title = "Berin's Webpage"
+theme = "PaperModX"
+enableRobotsTXT = true
+
+[params]
+showtoc = false
+hideSummary = false
+EnableInstantClick = true
+title = "Berin's Webpage"
+
+[params.assets]
+favicon = "/favicon.ico"
+
+[params.profileMode]
+enabled = true
+title = "Berin Aniesh"
+subtitle = "Simulations / Software Engineer"
+#imageUrl = "/profile.jpg"
+#imageTitle = "Profile Pic"
+
+[[params.profileMode.buttons]]
+name = "About"
+url = "/about"
+
+[[params.profileMode.buttons]]
+name = "Contact"
+url = "/contact"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/berinaniesh"
+
+
+[[params.socialIcons]]
+name = "gitlab"
+url = "https://gitlab.com/berinaniesh"
+
+
+[[params.socialIcons]]
+name = "kaggle"
+url = "https://kaggle.com/berinaniesh"
+
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/berinaniesh"
+
+
+#[[params.socialIcons]]
+#name = "stackoverflow"
+#url = "https://stackoverflow.com/users/19716381/berinaniesh"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:berinaniesh@gmail.com"
+
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = -110
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = -109
+
+#[[menu.main]]
+#identifier = "tutorials"
+#name = "Tutorials"
+#url = "/tutorials/"
+#weight = -100
+
+[[menu.main]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+weight = -90
+
+
+#[[menu.main]]
+#identifier = "awesome"
+#name = "Awesome"
+#url = "/awesome"
+#weight = -80
+
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = -70
+
+
+[[menu.main]]
+identifier = "gpg"
+name = "GPG"
+url = "/gpg/"
+weight = -60
