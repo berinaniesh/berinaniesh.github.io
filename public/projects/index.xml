@@ -124,18 +124,18 @@ Why ucf Each programming / markup language has a different formatting tool with 
 <p>Universal Code Formatter (UCF) is a command line application that formats most programming language files.</p>
 <h2 id="why-ucf">Why ucf</h2>
 <p>Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>black code1.py
-</span></span><span style="display:flex;"><span>gofmt -w code2.go
-</span></span><span style="display:flex;"><span>rustfmt code3.rs
-</span></span><span style="display:flex;"><span>prettier -w code4.html
-</span></span><span style="display:flex;"><span>clang-format -i code5.cpp
-</span></span></code></pre></div><p>With UCF</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ucf code1.py
-</span></span><span style="display:flex;"><span>ucf code2.go
-</span></span><span style="display:flex;"><span>ucf code3.rs
-</span></span><span style="display:flex;"><span>ucf code4.html
-</span></span><span style="display:flex;"><span>ucf code5.cpp
-</span></span></code></pre></div><h2 id="installation">Installation</h2>
+<pre tabindex="0"><code>black code1.py
+gofmt -w code2.go
+rustfmt code3.rs
+prettier -w code4.html
+clang-format -i code5.cpp
+</code></pre><p>With UCF</p>
+<pre tabindex="0"><code>ucf code1.py
+ucf code2.go
+ucf code3.rs
+ucf code4.html
+ucf code5.cpp
+</code></pre><h2 id="installation">Installation</h2>
 <h3 id="with-cargo">With cargo</h3>
 <pre tabindex="0"><code>cargo install ucf
 </code></pre><h3 id="aur">AUR</h3>

@@ -14,7 +14,7 @@ Universal Code Formatter (UCF) is a command line application that formats most p
 
 Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF
 
-```sh
+```
 black code1.py
 gofmt -w code2.go
 rustfmt code3.rs
@@ -24,7 +24,7 @@ clang-format -i code5.cpp
 
 With UCF
 
-```sh
+```
 ucf code1.py
 ucf code2.go
 ucf code3.rs
