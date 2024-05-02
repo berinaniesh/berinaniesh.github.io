@@ -21,4 +21,4 @@ U2UA/RFrIZxNhXCEv87pUkn2R0CPr2VQfrB8yRczgRXRJfIL
 
 ```
 
-It can be downloaded from [here](https://berinaniesh.github.io/berinaniesh.pgp)
+It can be downloaded from [here](/berinaniesh.pgp)
