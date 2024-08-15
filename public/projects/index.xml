@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Berin&#39;s Webpage</title>
-    <link>https://berinaniesh.github.io/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Berin&#39;s Webpage</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://berinaniesh.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bible Web 2</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-2/</link>
+      <link>http://localhost:1313/projects/bible-web-2/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-web-2/</guid>
+      <guid>http://localhost:1313/projects/bible-web-2/</guid>
       <description>Git Repo: Link&#xA;Deployed at: Link&#xA;This is an alternate frontend to the bible-api in which everything is generated prior and the whole site is served as static content.&#xA;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as Bible Web 1 (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.</description>
     </item>
     <item>
       <title>Bible Web 1</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-1/</link>
+      <link>http://localhost:1313/projects/bible-web-1/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-web-1/</guid>
+      <guid>http://localhost:1313/projects/bible-web-1/</guid>
       <description>Git Repo: Link&#xA;Deployed at: Link&#xA;This is a frontend to the bible-api, written using SvelteKit and TailwindCSS.&#xA;The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.</description>
     </item>
     <item>
       <title>Bible API</title>
-      <link>https://berinaniesh.github.io/projects/bible-api/</link>
+      <link>http://localhost:1313/projects/bible-api/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-api/</guid>
+      <guid>http://localhost:1313/projects/bible-api/</guid>
       <description>Git Repo: Link&#xA;Deployed at: Link&#xA;Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.&#xA;It uses a postgresql database and is written using Actix Web and SQLx.&#xA;Right now, two frontends get data from the API.&#xA;UI 1 - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).</description>
     </item>
     <item>
       <title>Server Jukebox</title>
-      <link>https://berinaniesh.github.io/projects/server-jukebox/</link>
+      <link>http://localhost:1313/projects/server-jukebox/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/server-jukebox/</guid>
+      <guid>http://localhost:1313/projects/server-jukebox/</guid>
       <description>Git Repo: Link&#xA;Server Jukebox, as the name implies is a jukebox for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.&#xA;It uses yt-dlp to download audio and mpv to play the downloaded audio. It also uses a mariadb database to keep state.&#xA;Deploy Clone the repo and cd into it. Create a copy of .</description>
     </item>
     <item>
       <title>Universal Code Formatter</title>
-      <link>https://berinaniesh.github.io/projects/ucf/</link>
+      <link>http://localhost:1313/projects/ucf/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/ucf/</guid>
+      <guid>http://localhost:1313/projects/ucf/</guid>
       <description>Git Repo: Link&#xA;Crates.io: Link&#xA;Universal Code Formatter (UCF) is a command line application that formats most programming language files.&#xA;Why ucf Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF</description>
     </item>
   </channel>
