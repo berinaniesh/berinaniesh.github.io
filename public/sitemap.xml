@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/bible-web-2/</loc>
+    <loc>https://berinaniesh.github.io/projects/bible-web-2/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://berinaniesh.github.io/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://berinaniesh.github.io/projects/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/bible-web-1/</loc>
+    <loc>https://berinaniesh.github.io/projects/bible-web-1/</loc>
     <lastmod>2023-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/bible-api/</loc>
+    <loc>https://berinaniesh.github.io/projects/bible-api/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://berinaniesh.github.io/blog/</loc>
     <lastmod>2023-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/mnist_benchmarks/</loc>
+    <loc>https://berinaniesh.github.io/blog/mnist_benchmarks/</loc>
     <lastmod>2023-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/server-jukebox/</loc>
+    <loc>https://berinaniesh.github.io/projects/server-jukebox/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tutorials/</loc>
+    <loc>https://berinaniesh.github.io/tutorials/</loc>
     <lastmod>2023-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/ucf/</loc>
+    <loc>https://berinaniesh.github.io/projects/ucf/</loc>
     <lastmod>2023-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://berinaniesh.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/awesome/</loc>
+    <loc>https://berinaniesh.github.io/awesome/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://berinaniesh.github.io/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/gpg/</loc>
+    <loc>https://berinaniesh.github.io/gpg/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://berinaniesh.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://berinaniesh.github.io/tags/</loc>
   </url>
 </urlset>

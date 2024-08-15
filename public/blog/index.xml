@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>List of Blog Posts on Berin&#39;s Webpage</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://berinaniesh.github.io/blog/</link>
     <description>Recent content in List of Blog Posts on Berin&#39;s Webpage</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://berinaniesh.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch)</title>
-      <link>http://localhost:1313/blog/mnist_benchmarks/</link>
+      <link>https://berinaniesh.github.io/blog/mnist_benchmarks/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/mnist_benchmarks/</guid>
+      <guid>https://berinaniesh.github.io/blog/mnist_benchmarks/</guid>
       <description>I got ROCm to work on my laptop and guess what that means, benchmarks!&#xA;Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &amp;#34;sequential&amp;#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here</description>
     </item>
   </channel>
