@@ -1,19 +1,127 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>List of Blog Posts on Berin&#39;s Webpage</title>
     <link>https://berinaniesh.github.io/blog/</link>
     <description>Recent content in List of Blog Posts on Berin&#39;s Webpage</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://berinaniesh.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch)</title>
       <link>https://berinaniesh.github.io/blog/mnist_benchmarks/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://berinaniesh.github.io/blog/mnist_benchmarks/</guid>
-      <description>I got ROCm to work on my laptop and guess what that means, benchmarks!&#xA;Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &amp;#34;sequential&amp;#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here</description>
+      <description>I got ROCm to work on my laptop and guess what that means, benchmarks!
+Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &amp;#34;sequential&amp;#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here</description>
+      <content:encoded><![CDATA[<p>I got ROCm to work on my laptop and guess what that means, benchmarks!</p>
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li>Form factor: Laptop</li>
+<li>Model: Asus G513QY</li>
+<li>CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)</li>
+<li>GPU: AMD Radeon 6800m
+(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)</li>
+</ul>
+<h2 id="tensorflow">Tensorflow</h2>
+<h3 id="model-summary">Model Summary</h3>
+<pre tabindex="0"><code>Model: &#34;sequential&#34;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
+
+ max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
+ )
+
+ dropout (Dropout)           (None, 12, 12, 64)        0
+
+ flatten (Flatten)           (None, 9216)              0
+
+ dense (Dense)               (None, 128)               1179776
+
+ dense_1 (Dense)             (None, 10)                1290
+
+=================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+_________________________________________________________________
+</code></pre><p>Code can be found <a href="https://gist.github.com/berinaniesh/7028945386613c76e80dca02ab060350">here</a></p>
+<h3 id="cpu">CPU</h3>
+<p><img loading="lazy" src="/cpu_mnist_tf.png" type="" alt="CPU TF"  /></p>
+<p>Took 654 seconds (10 minutes, 54 seconds).</p>
+<h3 id="gpu">GPU</h3>
+<p><img loading="lazy" src="/gpu_mnist_tf.png" type="" alt="GPU TF"  /></p>
+<p>Took 63 seconds (1 minute, 3 seconds).</p>
+<h2 id="pytorch">Pytorch</h2>
+<h3 id="model-summary-1">Model Summary</h3>
+<pre tabindex="0"><code>----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 32, 26, 26]             320
+            Conv2d-2           [-1, 64, 24, 24]          18,496
+           Dropout-3           [-1, 64, 12, 12]               0
+            Linear-4                  [-1, 128]       1,179,776
+           Dropout-5                  [-1, 128]               0
+            Linear-6                   [-1, 10]           1,290
+               Net-7                   [-1, 10]               0
+================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+----------------------------------------------------------------
+</code></pre><p>Code can be found <a href="https://github.com/pytorch/examples/blob/main/mnist/main.py">here</a></p>
+<h3 id="cpu-1">CPU</h3>
+<p><img loading="lazy" src="/cpu_mnist_torch.png" type="" alt="CPU"  /></p>
+<p>Took 458 seconds (7 minutes 38 seconds).</p>
+<h3 id="gpu-1">GPU</h3>
+<p><img loading="lazy" src="/gpu_mnist_torch.png" type="" alt="GPU"  /></p>
+<p>Took 110 seconds (1 minute, 50 seconds).</p>
+<h2 id="cpu-usages-compared">CPU usages compared</h2>
+<p>Measured during CPU runs.</p>
+<h3 id="tensorflow-1">Tensorflow</h3>
+<p><img loading="lazy" src="/cpu_usage_tf.png" type="" alt="CPU usage TF"  /></p>
+<p>Load Average: 11.4</p>
+<h3 id="pytorch-1">Pytorch</h3>
+<p><img loading="lazy" src="/cpu_usage_torch.png" type="" alt="CPU usage torch"  /></p>
+<p>Load Average: 7.05</p>
+<h2 id="inference">Inference</h2>
+<ul>
+<li>Tensorflow GPU is about 10 times faster than Tensorflow CPU (654 vs 63 seconds).</li>
+<li>Pytorch GPU is about 4 times faster than Pytorch CPU (458 vs 110 seconds).</li>
+<li>Pytorch CPU is about 1.4 times faster than Tensorflow CPU (654 vs 458 seconds).</li>
+<li>Tensorflow GPU is about 1.7 times faster than Pytorch GPU (110 vs 63 seconds)</li>
+<li>Tensorflow is much harder on the CPU than Pytorch (11.4 vs 7.05 load average).</li>
+</ul>
+<h2 id="conclusions--recommendations">Conclusions / Recommendations</h2>
+<p><em>Disclaimer: Everything is based on a few runs on my machine with ROCm.
+Results could wildly vary for other use cases.</em></p>
+<ul>
+<li>A GPU can greatly speedup workflows.
+<ul>
+<li>Even cheaper graphics cards help.</li>
+<li>This is due to GPUs&rsquo; parallel architecture and being better optimized for lower precision calculations and matrix multiplications.</li>
+</ul>
+</li>
+<li>If there is GPU available, use Tensorflow
+<ul>
+<li>Tensorflow is much faster (1.7 times) than Pytorch with GPU.</li>
+</ul>
+</li>
+<li>If there is no GPU available, use Pytorch
+<ul>
+<li>Tensorflow really pounds the CPU (11.4 vs 7.05 load avg) albeit being slow (654 vs 458 seconds).</li>
+</ul>
+</li>
+</ul>
+<p>Let me know if you have suggestions / corrections.</p>
+<p>Have a good time ahead!</p>
+]]></content:encoded>
     </item>
+    
   </channel>
 </rss>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>A few tips and tricks I learnt the hard way on Berin&#39;s Webpage</title>
     <link>https://berinaniesh.github.io/tutorials/</link>
     <description>Recent content in A few tips and tricks I learnt the hard way on Berin&#39;s Webpage</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://berinaniesh.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,82 +1,127 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home Page on Berin&#39;s Webpage</title>
     <link>https://berinaniesh.github.io/</link>
     <description>Recent content in Home Page on Berin&#39;s Webpage</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://berinaniesh.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bible Web 2</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-2/</link>
-      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-web-2/</guid>
-      <description>Git Repo: Link&#xA;Deployed at: Link&#xA;This is an alternate frontend to the bible-api in which everything is generated prior and the whole site is served as static content.&#xA;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as Bible Web 1 (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.</description>
-    </item>
-    <item>
-      <title>Bible Web 1</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-1/</link>
-      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-web-1/</guid>
-      <description>Git Repo: Link&#xA;Deployed at: Link&#xA;This is a frontend to the bible-api, written using SvelteKit and TailwindCSS.&#xA;The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.</description>
-    </item>
-    <item>
-      <title>Bible API</title>
-      <link>https://berinaniesh.github.io/projects/bible-api/</link>
-      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/bible-api/</guid>
-      <description>Git Repo: Link&#xA;Deployed at: Link&#xA;Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.&#xA;It uses a postgresql database and is written using Actix Web and SQLx.&#xA;Right now, two frontends get data from the API.&#xA;UI 1 - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).</description>
-    </item>
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch)</title>
       <link>https://berinaniesh.github.io/blog/mnist_benchmarks/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
       <guid>https://berinaniesh.github.io/blog/mnist_benchmarks/</guid>
-      <description>I got ROCm to work on my laptop and guess what that means, benchmarks!&#xA;Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &amp;#34;sequential&amp;#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here</description>
+      <description>I got ROCm to work on my laptop and guess what that means, benchmarks!
+Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &amp;#34;sequential&amp;#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here</description>
+      <content:encoded><![CDATA[<p>I got ROCm to work on my laptop and guess what that means, benchmarks!</p>
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li>Form factor: Laptop</li>
+<li>Model: Asus G513QY</li>
+<li>CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)</li>
+<li>GPU: AMD Radeon 6800m
+(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)</li>
+</ul>
+<h2 id="tensorflow">Tensorflow</h2>
+<h3 id="model-summary">Model Summary</h3>
+<pre tabindex="0"><code>Model: &#34;sequential&#34;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
+
+ max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
+ )
+
+ dropout (Dropout)           (None, 12, 12, 64)        0
+
+ flatten (Flatten)           (None, 9216)              0
+
+ dense (Dense)               (None, 128)               1179776
+
+ dense_1 (Dense)             (None, 10)                1290
+
+=================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+_________________________________________________________________
+</code></pre><p>Code can be found <a href="https://gist.github.com/berinaniesh/7028945386613c76e80dca02ab060350">here</a></p>
+<h3 id="cpu">CPU</h3>
+<p><img loading="lazy" src="/cpu_mnist_tf.png" type="" alt="CPU TF"  /></p>
+<p>Took 654 seconds (10 minutes, 54 seconds).</p>
+<h3 id="gpu">GPU</h3>
+<p><img loading="lazy" src="/gpu_mnist_tf.png" type="" alt="GPU TF"  /></p>
+<p>Took 63 seconds (1 minute, 3 seconds).</p>
+<h2 id="pytorch">Pytorch</h2>
+<h3 id="model-summary-1">Model Summary</h3>
+<pre tabindex="0"><code>----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 32, 26, 26]             320
+            Conv2d-2           [-1, 64, 24, 24]          18,496
+           Dropout-3           [-1, 64, 12, 12]               0
+            Linear-4                  [-1, 128]       1,179,776
+           Dropout-5                  [-1, 128]               0
+            Linear-6                   [-1, 10]           1,290
+               Net-7                   [-1, 10]               0
+================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+----------------------------------------------------------------
+</code></pre><p>Code can be found <a href="https://github.com/pytorch/examples/blob/main/mnist/main.py">here</a></p>
+<h3 id="cpu-1">CPU</h3>
+<p><img loading="lazy" src="/cpu_mnist_torch.png" type="" alt="CPU"  /></p>
+<p>Took 458 seconds (7 minutes 38 seconds).</p>
+<h3 id="gpu-1">GPU</h3>
+<p><img loading="lazy" src="/gpu_mnist_torch.png" type="" alt="GPU"  /></p>
+<p>Took 110 seconds (1 minute, 50 seconds).</p>
+<h2 id="cpu-usages-compared">CPU usages compared</h2>
+<p>Measured during CPU runs.</p>
+<h3 id="tensorflow-1">Tensorflow</h3>
+<p><img loading="lazy" src="/cpu_usage_tf.png" type="" alt="CPU usage TF"  /></p>
+<p>Load Average: 11.4</p>
+<h3 id="pytorch-1">Pytorch</h3>
+<p><img loading="lazy" src="/cpu_usage_torch.png" type="" alt="CPU usage torch"  /></p>
+<p>Load Average: 7.05</p>
+<h2 id="inference">Inference</h2>
+<ul>
+<li>Tensorflow GPU is about 10 times faster than Tensorflow CPU (654 vs 63 seconds).</li>
+<li>Pytorch GPU is about 4 times faster than Pytorch CPU (458 vs 110 seconds).</li>
+<li>Pytorch CPU is about 1.4 times faster than Tensorflow CPU (654 vs 458 seconds).</li>
+<li>Tensorflow GPU is about 1.7 times faster than Pytorch GPU (110 vs 63 seconds)</li>
+<li>Tensorflow is much harder on the CPU than Pytorch (11.4 vs 7.05 load average).</li>
+</ul>
+<h2 id="conclusions--recommendations">Conclusions / Recommendations</h2>
+<p><em>Disclaimer: Everything is based on a few runs on my machine with ROCm.
+Results could wildly vary for other use cases.</em></p>
+<ul>
+<li>A GPU can greatly speedup workflows.
+<ul>
+<li>Even cheaper graphics cards help.</li>
+<li>This is due to GPUs&rsquo; parallel architecture and being better optimized for lower precision calculations and matrix multiplications.</li>
+</ul>
+</li>
+<li>If there is GPU available, use Tensorflow
+<ul>
+<li>Tensorflow is much faster (1.7 times) than Pytorch with GPU.</li>
+</ul>
+</li>
+<li>If there is no GPU available, use Pytorch
+<ul>
+<li>Tensorflow really pounds the CPU (11.4 vs 7.05 load avg) albeit being slow (654 vs 458 seconds).</li>
+</ul>
+</li>
+</ul>
+<p>Let me know if you have suggestions / corrections.</p>
+<p>Have a good time ahead!</p>
+]]></content:encoded>
     </item>
-    <item>
-      <title>Server Jukebox</title>
-      <link>https://berinaniesh.github.io/projects/server-jukebox/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/server-jukebox/</guid>
-      <description>Git Repo: Link&#xA;Server Jukebox, as the name implies is a jukebox for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.&#xA;It uses yt-dlp to download audio and mpv to play the downloaded audio. It also uses a mariadb database to keep state.&#xA;Deploy Clone the repo and cd into it. Create a copy of .</description>
-    </item>
-    <item>
-      <title>Universal Code Formatter</title>
-      <link>https://berinaniesh.github.io/projects/ucf/</link>
-      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/projects/ucf/</guid>
-      <description>Git Repo: Link&#xA;Crates.io: Link&#xA;Universal Code Formatter (UCF) is a command line application that formats most programming language files.&#xA;Why ucf Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://berinaniesh.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/about/</guid>
-      <description>About Hi, I am Berin Aniesh. I like the Bible, chess engines, numerical simulations, machine learning and linux. Links GitHub GitLab Kaggle LinkedIn </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://berinaniesh.github.io/awesome/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/awesome/</guid>
-      <description>Awesome Here are some useful links worth checking out (in no particular order)&#xA;landchad.net http://michael.orlitzky.com 3blue1brown.com charlottedann.com tania.dev </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://berinaniesh.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/contact/</guid>
-      <description>Contact Email: berinaniesh@gmail.com&#xA;Telegram - @berinaniesh&#xA;Matrix - @berinaniesh:matrix.org</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://berinaniesh.github.io/gpg/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://berinaniesh.github.io/gpg/</guid>
-      <description>GPG key -----BEGIN PGP PUBLIC KEY BLOCK----- mQENBGZaixYBCAC+xEwHx5AJNsbgF9yH9La34YbgAIHMEGlrly38fFdl5euTD/hT jaWTsbSnk6+KW/0Ncom8CJlpECuybz+j9TmiiIWqzOEDC/SOKG0Drh7Vphclww6T 9iXKB0aHcKUcmpGTrqCxnf9pHmreFoxNhh3cJWpTwpBTC+/qJIQgNqhQXUC7Nyxy f0VaF02SOU/6bzOhN00y2bPJedKyVHtvNJHS0iwL0QW6wAv/yla6s/SG3Kyz+jyO g0leJ9NmvvOPRNid+n5RzK+dkHEBzXFuPTEnsA08MImfdl8IUWvL1Q9cY9NmIczb 9HfziRJz/HL3zxPjOOIMSLLMwkTMixIXmOefABEBAAG0JEJlcmluIEFuaWVzaCA8 YmVyaW5hbmllc2hAZ21haWwuY29tPokBUQQTAQgAOxYhBCZVqpuu/4MlH6kTh4Ew JSgsoBkXBQJmWosWAhsDBQsJCAcCAiICBhUKCQgLAgQWAgMBAh4HAheAAAoJEIEw JSgsoBkXJLcH/1+q2bloLPJr+RG5ul0qXYxSs4VIylnXBXYLmGW7Or1mpavCp2ZX NYsPKCNNVHmdmALucTLLRvOujDIkgewzoOuoC7y1wUsZKGnTR1sETrGBYmx18R98 RfRNMv5KGLAM0PIdV4SM82JWy8LjmqBvsftuVB50PjKw4fuqAnvtOxkQ9fMKNnhl 6leV+LBHE6+Qg84P9bnkMfcs0kQt7dSW+yCed+rP2T+M/TAGqndtoCPvJMG2zCXj 0w2MlKvD83aYPtdm7z38JRlGVMmKORnZ11h0IP1jpEVbPpCgOYsNgpqKOhwDEd20 aAs+RSJtHvnV/e5F+LT2sHt36K9JyggyvXG5AQ0EZlqLFgEIAMNN171V4gsc5jWV /9KtPD5h234U1MUHdlnlw3En86LRYsSTuOoDOwRioz+q5dkwH97IDKG4f3EHN7uL +0QIAgUyPkFGNlBdkefyQ10Plch1kaQalQD2ZS7UsCNF67X2guO7r50XtHhXALCG 0A2Ft8QZZrwyi02jtU2ZHMB07264tZwnJscEKcjFxEXV6TRLRqKL8OBgPJZbvmoB e8bi+JEAqzkjEC6AnNeQJ6A5X7H8C2IxaJSEcgjv1gs+mzKD5hK6Fv4zsEaZaBnv 75tP+FZdPnKPAnbb4n0v+kGNcxcyXYIXy00KRiA+PGPCX/u9LuoQVmuYg28ywBms nKBSoY0AEQEAAYkBNgQYAQgAIBYhBCZVqpuu/4MlH6kTh4EwJSgsoBkXBQJmWosW AhsMAAoJEIEwJSgsoBkXW48H/1RzED3s/pvBCNwuUsRtfbX6nuU72jkmz5tOBm2E b5TLZsjlT9Dr3QbPyphg6duetX2OGTd82QL6KUfjqdqoRFRtUHoNDXWiWTdtjvHo 8NtFx4nkU2fBm/kkTln2D3E1jjEvvWgoKGkIIAAxz5E/GbO5pUVOp9eT42Cy5Ppe ZdBT0k/t1nZ6oiYBHYHmKEBRrlTj/nh3nTOFRL5NFftRQ16fPMPVCPnVQQACjDtZ U8qEwV+61xuQHYur5zBZ5ZgvicIKGfxHi46+vafR/cIhq9Skm5fxGkkZcdeHaCcO OpDtse5L5Tg1hpuosrSYvy3WIt+pMRKA1aEme2TTtAVDNUw= =3aFy -----END PGP PUBLIC KEY BLOCK----- </description>
-    </item>
+    
   </channel>
 </rss>
