@@ -8,7 +8,41 @@
 <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch) | Berin&#39;s Webpage</title>
 <meta name="keywords" content="">
 <meta name="description" content="I got ROCm to work on my laptop and guess what that means, benchmarks!
-Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &#34;sequential&#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here">
+Hardware
+
+Form factor: Laptop
+Model: Asus G513QY
+CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)
+GPU: AMD Radeon 6800m
+(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)
+
+Tensorflow
+Model Summary
+Model: &#34;sequential&#34;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
+
+ max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
+ )
+
+ dropout (Dropout)           (None, 12, 12, 64)        0
+
+ flatten (Flatten)           (None, 9216)              0
+
+ dense (Dense)               (None, 128)               1179776
+
+ dense_1 (Dense)             (None, 10)                1290
+
+=================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+_________________________________________________________________
+Code can be found here">
 <meta name="author" content="">
 <link rel="canonical" href="https://berinaniesh.github.io/blog/mnist_benchmarks/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7da7716a1f2d0725f74c6ae7f8d6adafc43aabe2b366b65bfbf433448e2a2001.css" integrity="sha256-fadxah8tByX3TGrn&#43;Natr8Q6q&#43;KzZrZb&#43;/QzRI4qIAE=" rel="preload stylesheet" as="style">
@@ -16,15 +50,80 @@ Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd perc
 <link rel="apple-touch-icon" href="https://berinaniesh.github.io/apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="https://berinaniesh.github.io/blog/mnist_benchmarks/">
 
-  
-
-
 <meta name="twitter:title" content="MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch) | Berin&#39;s Webpage" />
 <meta name="twitter:description" content="I got ROCm to work on my laptop and guess what that means, benchmarks!
-Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &#34;sequential&#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here" />
+Hardware
+
+Form factor: Laptop
+Model: Asus G513QY
+CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)
+GPU: AMD Radeon 6800m
+(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)
+
+Tensorflow
+Model Summary
+Model: &#34;sequential&#34;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
+
+ max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
+ )
+
+ dropout (Dropout)           (None, 12, 12, 64)        0
+
+ flatten (Flatten)           (None, 9216)              0
+
+ dense (Dense)               (None, 128)               1179776
+
+ dense_1 (Dense)             (None, 10)                1290
+
+=================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+_________________________________________________________________
+Code can be found here" />
 <meta property="og:title" content="MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch) | Berin&#39;s Webpage" />
 <meta property="og:description" content="I got ROCm to work on my laptop and guess what that means, benchmarks!
-Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: &#34;sequential&#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here" />
+Hardware
+
+Form factor: Laptop
+Model: Asus G513QY
+CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)
+GPU: AMD Radeon 6800m
+(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)
+
+Tensorflow
+Model Summary
+Model: &#34;sequential&#34;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
+
+ max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
+ )
+
+ dropout (Dropout)           (None, 12, 12, 64)        0
+
+ flatten (Flatten)           (None, 9216)              0
+
+ dense (Dense)               (None, 128)               1179776
+
+ dense_1 (Dense)             (None, 10)                1290
+
+=================================================================
+Total params: 1,199,882
+Trainable params: 1,199,882
+Non-trainable params: 0
+_________________________________________________________________
+Code can be found here" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://berinaniesh.github.io/blog/mnist_benchmarks/" />
 <meta property="article:section" content="blog" />
@@ -58,7 +157,7 @@ Hardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd perc
   "@type": "BlogPosting",
   "headline": "MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch) | Berin's Webpage",
   "name": "MNIST Benchmarks (CPU vs GPU \/ Tensorflow vs Pytorch)",
-  "description": "I got ROCm to work on my laptop and guess what that means, benchmarks!\nHardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: \u0026#34;sequential\u0026#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here",
+  "description": "I got ROCm to work on my laptop and guess what that means, benchmarks!\nHardware Form factor: Laptop Model: Asus G513QY CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500) GPU: AMD Radeon 6800m (91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090) Tensorflow Model Summary Model: \u0026#34;sequential\u0026#34; _________________________________________________________________ Layer (type) Output Shape Param # ================================================================= conv2d (Conv2D) (None, 26, 26, 32) 320 conv2d_1 (Conv2D) (None, 24, 24, 64) 18496 max_pooling2d (MaxPooling2D (None, 12, 12, 64) 0 ) dropout (Dropout) (None, 12, 12, 64) 0 flatten (Flatten) (None, 9216) 0 dense (Dense) (None, 128) 1179776 dense_1 (Dense) (None, 10) 1290 ================================================================= Total params: 1,199,882 Trainable params: 1,199,882 Non-trainable params: 0 _________________________________________________________________ Code can be found here\n",
   "keywords": [
     
   ],
@@ -373,7 +472,7 @@ Results could wildly vary for other use cases.</em></p>
     </main>
     
 <footer class="footer">
-  <span>&copy; 2024 <a href="https://berinaniesh.github.io/">Berin&#39;s Webpage</a></span><span style="display: inline-block; margin-left: 1em;">
+  <span>&copy; 2025 <a href="https://berinaniesh.github.io/">Berin&#39;s Webpage</a></span><span style="display: inline-block; margin-left: 1em;">
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
   </span>
   <span style="display: inline-block; margin-left: 1em;">

@@ -13,10 +13,10 @@
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://berinaniesh.github.io/projects/bible-web-2/</guid>
-      <description>Git Repo: Link
-Deployed at: Link
-This is an alternate frontend to the bible-api in which everything is generated prior and the whole site is served as static content.
-The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as Bible Web 1 (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.</description>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://gitlab.com/scripture/scripture.gitlab.io&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://scripture.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an alternate frontend to the &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt; in which everything is generated prior and the whole site is served as static content.&lt;/p&gt;
+&lt;p&gt;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-web-1/&#34;&gt;Bible Web 1&lt;/a&gt; (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://gitlab.com/scripture/scripture.gitlab.io">Link</a></p>
 <p>Deployed at: <a href="https://scripture.berinaniesh.xyz">Link</a></p>
 <p>This is an alternate frontend to the <a href="/projects/bible-api/">bible-api</a> in which everything is generated prior and the whole site is served as static content.</p>
@@ -42,10 +42,10 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://berinaniesh.github.io/projects/bible-web-1/</guid>
-      <description>Git Repo: Link
-Deployed at: Link
-This is a frontend to the bible-api, written using SvelteKit and TailwindCSS.
-The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.</description>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-web&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://bible.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a frontend to the &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt;, written using SvelteKit and TailwindCSS.&lt;/p&gt;
+&lt;p&gt;The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/bible-web">Link</a></p>
 <p>Deployed at: <a href="https://bible.berinaniesh.xyz">Link</a></p>
 <p>This is a frontend to the <a href="/projects/bible-api/">bible-api</a>, written using SvelteKit and TailwindCSS.</p>
@@ -59,12 +59,17 @@ The objective is to provide a minimal UI to read The Bible. The application is v
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://berinaniesh.github.io/projects/bible-api/</guid>
-      <description>Git Repo: Link
-Deployed at: Link
-Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.
-It uses a postgresql database and is written using Actix Web and SQLx.
-Right now, two frontends get data from the API.
-UI 1 - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).</description>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-api&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://api.bible.berinaniesh.xyz/docs&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.&lt;/p&gt;
+&lt;p&gt;It uses a postgresql database and is written using &lt;a href=&#34;https://github.com/actix/actix-web&#34;&gt;Actix Web&lt;/a&gt; and &lt;a href=&#34;https://github.com/launchbadge/sqlx&#34;&gt;SQLx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Right now, two frontends get data from the API.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bible.berinaniesh.xyz&#34;&gt;UI 1&lt;/a&gt; - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scripture.berinaniesh.xyz&#34;&gt;UI 2&lt;/a&gt; - SSG, more mature UI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;The server, the data and the bibles are all in the public domain and so feel free to self host, distribute everything.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/bible-api">Link</a></p>
 <p>Deployed at: <a href="https://api.bible.berinaniesh.xyz/docs">Link</a></p>
 <p>Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.</p>
@@ -85,10 +90,21 @@ UI 1 - SSR with hydration, fast and responsive UI (prerendering, fetch on hover,
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://berinaniesh.github.io/projects/server-jukebox/</guid>
-      <description>Git Repo: Link
-Server Jukebox, as the name implies is a jukebox for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.
-It uses yt-dlp to download audio and mpv to play the downloaded audio. It also uses a mariadb database to keep state.
-Deploy Clone the repo and cd into it. Create a copy of .</description>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Server Jukebox, as the name implies is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Jukebox&#34;&gt;jukebox&lt;/a&gt; for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.&lt;/p&gt;
+&lt;p&gt;It uses &lt;code&gt;yt-dlp&lt;/code&gt; to download audio and &lt;code&gt;mpv&lt;/code&gt; to play the downloaded audio. It also uses a &lt;code&gt;mariadb&lt;/code&gt; database to keep state.&lt;/p&gt;
+&lt;h2 id=&#34;deploy&#34;&gt;Deploy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox&#34;&gt;repo&lt;/a&gt; and &lt;code&gt;cd&lt;/code&gt; into it.&lt;/li&gt;
+&lt;li&gt;Create a copy of &lt;code&gt;.env.example&lt;/code&gt; to &lt;code&gt;.env&lt;/code&gt; and make necessary changes.&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;sqlx-cli&lt;/code&gt; with &lt;code&gt;cargo install sqlx-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run migrations with &lt;code&gt;sqlx migrate run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the application with &lt;code&gt;cargo run --release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;To deploy as a systemd service, check out &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox/blob/main/jukebox.service&#34;&gt;this&lt;/a&gt; file in the repo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id=&#34;web-ui&#34;&gt;Web UI&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://berinaniesh.github.io/server_jukebox1.png&#34; type=&#34;&#34; alt=&#34;Screenshot1&#34;  /&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/server-jukebox">Link</a></p>
 <p>Server Jukebox, as the name implies is a <a href="https://en.wikipedia.org/wiki/Jukebox">jukebox</a> for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.</p>
 <p>It uses <code>yt-dlp</code> to download audio and <code>mpv</code> to play the downloaded audio. It also uses a <code>mariadb</code> database to keep state.</p>
@@ -115,10 +131,17 @@ Deploy Clone the repo and cd into it. Create a copy of .</description>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://berinaniesh.github.io/projects/ucf/</guid>
-      <description>Git Repo: Link
-Crates.io: Link
-Universal Code Formatter (UCF) is a command line application that formats most programming language files.
-Why ucf Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF</description>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Crates.io: &lt;a href=&#34;https://crates.io/crates/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Universal Code Formatter (UCF) is a command line application that formats most programming language files.&lt;/p&gt;
+&lt;h2 id=&#34;why-ucf&#34;&gt;Why ucf&lt;/h2&gt;
+&lt;p&gt;Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;black code1.py
+gofmt -w code2.go
+rustfmt code3.rs
+prettier -w code4.html
+clang-format -i code5.cpp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With UCF&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/ucf">Link</a></p>
 <p>Crates.io: <a href="https://crates.io/crates/ucf">Link</a></p>
 <p>Universal Code Formatter (UCF) is a command line application that formats most programming language files.</p>
