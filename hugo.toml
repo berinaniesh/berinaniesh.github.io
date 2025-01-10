@@ -43,9 +43,9 @@ name = "kaggle"
 url = "https://kaggle.com/berinaniesh"
 
 
-[[params.socialIcons]]
-name = "linkedin"
-url = "https://linkedin.com/in/berinaniesh"
+#[[params.socialIcons]]
+#name = "linkedin"
+#url = "https://linkedin.com/in/berinaniesh"
 
 
 #[[params.socialIcons]]
