@@ -16,7 +16,7 @@ favicon = "/favicon.ico"
 [params.profileMode]
 enabled = true
 title = "Berin Aniesh"
-subtitle = "Simulations / Software Engineer"
+subtitle = "Software Engineer"
 #imageUrl = "/profile.jpg"
 #imageTitle = "Profile Pic"
 
