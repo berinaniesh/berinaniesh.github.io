@@ -2,158 +2,169 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home Page on Berin&#39;s Webpage</title>
-    <link>https://berinaniesh.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home Page on Berin&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch)</title>
-      <link>https://berinaniesh.github.io/blog/mnist_benchmarks/</link>
-      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      <title>Bible Web 2</title>
+      <link>http://localhost:1313/projects/bible-web-2/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/blog/mnist_benchmarks/</guid>
-      <description>&lt;p&gt;I got ROCm to work on my laptop and guess what that means, benchmarks!&lt;/p&gt;
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+      <guid>http://localhost:1313/projects/bible-web-2/</guid>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://gitlab.com/scripture/scripture.gitlab.io&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://scripture.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an alternate frontend to the &lt;a href=&#34;http://localhost:1313/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt; in which everything is generated prior and the whole site is served as static content.&lt;/p&gt;
+&lt;p&gt;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as &lt;a href=&#34;http://localhost:1313/projects/bible-web-1/&#34;&gt;Bible Web 1&lt;/a&gt; (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Git Repo: <a href="https://gitlab.com/scripture/scripture.gitlab.io">Link</a></p>
+<p>Deployed at: <a href="https://scripture.berinaniesh.xyz">Link</a></p>
+<p>This is an alternate frontend to the <a href="/projects/bible-api/">bible-api</a> in which everything is generated prior and the whole site is served as static content.</p>
+<p>The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as <a href="/projects/bible-web-1/">Bible Web 1</a> (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&rsquo;s purpose well.</p>
+<h2 id="generation-process">Generation Process</h2>
+<p>The site uses <a href="https://rust-lang.github.io/mdBook/index.html">mdbook</a>, which is a static site generator written in rust by the rust team themselves. It is fast, minimal, extendable and featureful.</p>
+<p>The problem is that <code>mdbook</code> requires each page to be typed out in their <code>SUMMARY.md</code>. There are 1189 chapters in a standard bible and the UI serves four bibles (right now), which amounts to 4756 generated pages.</p>
+<p>So, we used a python script, which fetches verses from the <a href="/projects/bible-api/">Bible API</a> and constructs a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">tree</a>. This tree is serialized to markdown files and mdbook then generates html and css for the generated markdown files.
+The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.io/-/blob/generation_branch/generator.py?ref_type=heads">here</a>.</p>
+<h2 id="hurdles">Hurdles</h2>
+<p>There are a total of 4758 pages and we hit limits on various stages.</p>
+<ol>
+<li><code>mdbook</code> is not designed to write this many pages. It rerenders the whole book on a single thread with each change. This of course is problematic and so, the generated code and the generation scripts are at separate branches.</li>
+<li><code>mdbook</code> running on GitLab CI, due to some unknown reason (probably memory/storage/cpu limitations), won&rsquo;t generate any content on pages since the number of bibles reached 2. So, we moved everything to local build and hosting.</li>
+<li>GitLab has a limit on the size of the repo that can be hosted on Gitlab Pages. So, this is hosted on a linux server (which made the app load much faster).</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Bible Web 1</title>
+      <link>http://localhost:1313/projects/bible-web-1/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/bible-web-1/</guid>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-web&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://bible.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a frontend to the &lt;a href=&#34;http://localhost:1313/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt;, written using SvelteKit and TailwindCSS.&lt;/p&gt;
+&lt;p&gt;The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/bible-web">Link</a></p>
+<p>Deployed at: <a href="https://bible.berinaniesh.xyz">Link</a></p>
+<p>This is a frontend to the <a href="/projects/bible-api/">bible-api</a>, written using SvelteKit and TailwindCSS.</p>
+<p>The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Bible API</title>
+      <link>http://localhost:1313/projects/bible-api/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/bible-api/</guid>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-api&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deployed at: &lt;a href=&#34;https://api.bible.berinaniesh.xyz/docs&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.&lt;/p&gt;
+&lt;p&gt;It uses a postgresql database and is written using &lt;a href=&#34;https://github.com/actix/actix-web&#34;&gt;Actix Web&lt;/a&gt; and &lt;a href=&#34;https://github.com/launchbadge/sqlx&#34;&gt;SQLx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Right now, two frontends get data from the API.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Form factor: Laptop&lt;/li&gt;
-&lt;li&gt;Model: Asus G513QY&lt;/li&gt;
-&lt;li&gt;CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)&lt;/li&gt;
-&lt;li&gt;GPU: AMD Radeon 6800m
-(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bible.berinaniesh.xyz&#34;&gt;UI 1&lt;/a&gt; - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scripture.berinaniesh.xyz&#34;&gt;UI 2&lt;/a&gt; - SSG, more mature UI.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;tensorflow&#34;&gt;Tensorflow&lt;/h2&gt;
-&lt;h3 id=&#34;model-summary&#34;&gt;Model Summary&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Model: &amp;#34;sequential&amp;#34;
-_________________________________________________________________
- Layer (type)                Output Shape              Param #
-=================================================================
- conv2d (Conv2D)             (None, 26, 26, 32)        320
-
- conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
-
- max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
- )
-
- dropout (Dropout)           (None, 12, 12, 64)        0
-
- flatten (Flatten)           (None, 9216)              0
-
- dense (Dense)               (None, 128)               1179776
-
- dense_1 (Dense)             (None, 10)                1290
-
-=================================================================
-Total params: 1,199,882
-Trainable params: 1,199,882
-Non-trainable params: 0
-_________________________________________________________________
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Code can be found &lt;a href=&#34;https://gist.github.com/berinaniesh/7028945386613c76e80dca02ab060350&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>I got ROCm to work on my laptop and guess what that means, benchmarks!</p>
-<h2 id="hardware">Hardware</h2>
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;The server, the data and the bibles are all in the public domain and so feel free to self host, distribute everything.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/bible-api">Link</a></p>
+<p>Deployed at: <a href="https://api.bible.berinaniesh.xyz/docs">Link</a></p>
+<p>Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.</p>
+<p>It uses a postgresql database and is written using <a href="https://github.com/actix/actix-web">Actix Web</a> and <a href="https://github.com/launchbadge/sqlx">SQLx</a>.</p>
+<p>Right now, two frontends get data from the API.</p>
 <ul>
-<li>Form factor: Laptop</li>
-<li>Model: Asus G513QY</li>
-<li>CPU: AMD Ryzen 5900HX (83rd percentile on cpu.userbenchmark.com, ~ 10% slower than a desktop 5500)</li>
-<li>GPU: AMD Radeon 6800m
-(91st percentile on gpu.userbenchmark.com, ~15% slower than a desktop 3060, 1/5th the power of a desktop 4090)</li>
+<li><a href="https://bible.berinaniesh.xyz">UI 1</a> - SSR with hydration, fast and responsive UI (prerendering, fetch on hover, etc).</li>
+<li><a href="https://scripture.berinaniesh.xyz">UI 2</a> - SSG, more mature UI.</li>
 </ul>
-<h2 id="tensorflow">Tensorflow</h2>
-<h3 id="model-summary">Model Summary</h3>
-<pre tabindex="0"><code>Model: &#34;sequential&#34;
-_________________________________________________________________
- Layer (type)                Output Shape              Param #
-=================================================================
- conv2d (Conv2D)             (None, 26, 26, 32)        320
-
- conv2d_1 (Conv2D)           (None, 24, 24, 64)        18496
-
- max_pooling2d (MaxPooling2D  (None, 12, 12, 64)       0
- )
-
- dropout (Dropout)           (None, 12, 12, 64)        0
-
- flatten (Flatten)           (None, 9216)              0
-
- dense (Dense)               (None, 128)               1179776
-
- dense_1 (Dense)             (None, 10)                1290
-
-=================================================================
-Total params: 1,199,882
-Trainable params: 1,199,882
-Non-trainable params: 0
-_________________________________________________________________
-</code></pre><p>Code can be found <a href="https://gist.github.com/berinaniesh/7028945386613c76e80dca02ab060350">here</a></p>
-<h3 id="cpu">CPU</h3>
-<p><img loading="lazy" src="/cpu_mnist_tf.png" type="" alt="CPU TF"  /></p>
-<p>Took 654 seconds (10 minutes, 54 seconds).</p>
-<h3 id="gpu">GPU</h3>
-<p><img loading="lazy" src="/gpu_mnist_tf.png" type="" alt="GPU TF"  /></p>
-<p>Took 63 seconds (1 minute, 3 seconds).</p>
-<h2 id="pytorch">Pytorch</h2>
-<h3 id="model-summary-1">Model Summary</h3>
-<pre tabindex="0"><code>----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 32, 26, 26]             320
-            Conv2d-2           [-1, 64, 24, 24]          18,496
-           Dropout-3           [-1, 64, 12, 12]               0
-            Linear-4                  [-1, 128]       1,179,776
-           Dropout-5                  [-1, 128]               0
-            Linear-6                   [-1, 10]           1,290
-               Net-7                   [-1, 10]               0
-================================================================
-Total params: 1,199,882
-Trainable params: 1,199,882
-Non-trainable params: 0
-----------------------------------------------------------------
-</code></pre><p>Code can be found <a href="https://github.com/pytorch/examples/blob/main/mnist/main.py">here</a></p>
-<h3 id="cpu-1">CPU</h3>
-<p><img loading="lazy" src="/cpu_mnist_torch.png" type="" alt="CPU"  /></p>
-<p>Took 458 seconds (7 minutes 38 seconds).</p>
-<h3 id="gpu-1">GPU</h3>
-<p><img loading="lazy" src="/gpu_mnist_torch.png" type="" alt="GPU"  /></p>
-<p>Took 110 seconds (1 minute, 50 seconds).</p>
-<h2 id="cpu-usages-compared">CPU usages compared</h2>
-<p>Measured during CPU runs.</p>
-<h3 id="tensorflow-1">Tensorflow</h3>
-<p><img loading="lazy" src="/cpu_usage_tf.png" type="" alt="CPU usage TF"  /></p>
-<p>Load Average: 11.4</p>
-<h3 id="pytorch-1">Pytorch</h3>
-<p><img loading="lazy" src="/cpu_usage_torch.png" type="" alt="CPU usage torch"  /></p>
-<p>Load Average: 7.05</p>
-<h2 id="inference">Inference</h2>
+<h2 id="license">License</h2>
+<p>The server, the data and the bibles are all in the public domain and so feel free to self host, distribute everything.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Server Jukebox</title>
+      <link>http://localhost:1313/projects/server-jukebox/</link>
+      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/server-jukebox/</guid>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Server Jukebox, as the name implies is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Jukebox&#34;&gt;jukebox&lt;/a&gt; for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.&lt;/p&gt;
+&lt;p&gt;It uses &lt;code&gt;yt-dlp&lt;/code&gt; to download audio and &lt;code&gt;mpv&lt;/code&gt; to play the downloaded audio. It also uses a &lt;code&gt;mariadb&lt;/code&gt; database to keep state.&lt;/p&gt;
+&lt;h2 id=&#34;deploy&#34;&gt;Deploy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox&#34;&gt;repo&lt;/a&gt; and &lt;code&gt;cd&lt;/code&gt; into it.&lt;/li&gt;
+&lt;li&gt;Create a copy of &lt;code&gt;.env.example&lt;/code&gt; to &lt;code&gt;.env&lt;/code&gt; and make necessary changes.&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;sqlx-cli&lt;/code&gt; with &lt;code&gt;cargo install sqlx-cli&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run migrations with &lt;code&gt;sqlx migrate run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the application with &lt;code&gt;cargo run --release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;To deploy as a systemd service, check out &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox/blob/main/jukebox.service&#34;&gt;this&lt;/a&gt; file in the repo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id=&#34;web-ui&#34;&gt;Web UI&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/server_jukebox1.png&#34; type=&#34;&#34; alt=&#34;Screenshot1&#34;  /&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/server-jukebox">Link</a></p>
+<p>Server Jukebox, as the name implies is a <a href="https://en.wikipedia.org/wiki/Jukebox">jukebox</a> for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.</p>
+<p>It uses <code>yt-dlp</code> to download audio and <code>mpv</code> to play the downloaded audio. It also uses a <code>mariadb</code> database to keep state.</p>
+<h2 id="deploy">Deploy</h2>
 <ul>
-<li>Tensorflow GPU is about 10 times faster than Tensorflow CPU (654 vs 63 seconds).</li>
-<li>Pytorch GPU is about 4 times faster than Pytorch CPU (458 vs 110 seconds).</li>
-<li>Pytorch CPU is about 1.4 times faster than Tensorflow CPU (654 vs 458 seconds).</li>
-<li>Tensorflow GPU is about 1.7 times faster than Pytorch GPU (110 vs 63 seconds)</li>
-<li>Tensorflow is much harder on the CPU than Pytorch (11.4 vs 7.05 load average).</li>
+<li>Clone the <a href="https://github.com/berinaniesh/server-jukebox">repo</a> and <code>cd</code> into it.</li>
+<li>Create a copy of <code>.env.example</code> to <code>.env</code> and make necessary changes.</li>
+<li>Install <code>sqlx-cli</code> with <code>cargo install sqlx-cli</code></li>
+<li>Run migrations with <code>sqlx migrate run</code></li>
+<li>Run the application with <code>cargo run --release</code></li>
+<li>To deploy as a systemd service, check out <a href="https://github.com/berinaniesh/server-jukebox/blob/main/jukebox.service">this</a> file in the repo.</li>
 </ul>
-<h2 id="conclusions--recommendations">Conclusions / Recommendations</h2>
-<p><em>Disclaimer: Everything is based on a few runs on my machine with ROCm.
-Results could wildly vary for other use cases.</em></p>
-<ul>
-<li>A GPU can greatly speedup workflows.
-<ul>
-<li>Even cheaper graphics cards help.</li>
-<li>This is due to GPUs&rsquo; parallel architecture and being better optimized for lower precision calculations and matrix multiplications.</li>
-</ul>
-</li>
-<li>If there is GPU available, use Tensorflow
-<ul>
-<li>Tensorflow is much faster (1.7 times) than Pytorch with GPU.</li>
-</ul>
-</li>
-<li>If there is no GPU available, use Pytorch
-<ul>
-<li>Tensorflow really pounds the CPU (11.4 vs 7.05 load avg) albeit being slow (654 vs 458 seconds).</li>
-</ul>
-</li>
-</ul>
-<p>Let me know if you have suggestions / corrections.</p>
-<p>Have a good time ahead!</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="web-ui">Web UI</h3>
+<p><img loading="lazy" src="/server_jukebox1.png" type="" alt="Screenshot1"  /></p>
+<h3 id="application-log">Application Log</h3>
+<p><img loading="lazy" src="/server_jukebox2.png" type="" alt="Screenshot2"  /></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Universal Code Formatter</title>
+      <link>http://localhost:1313/projects/ucf/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/ucf/</guid>
+      <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Crates.io: &lt;a href=&#34;https://crates.io/crates/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Universal Code Formatter (UCF) is a command line application that formats most programming language files.&lt;/p&gt;
+&lt;h2 id=&#34;why-ucf&#34;&gt;Why ucf&lt;/h2&gt;
+&lt;p&gt;Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;black code1.py
+gofmt -w code2.go
+rustfmt code3.rs
+prettier -w code4.html
+clang-format -i code5.cpp
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With UCF&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/ucf">Link</a></p>
+<p>Crates.io: <a href="https://crates.io/crates/ucf">Link</a></p>
+<p>Universal Code Formatter (UCF) is a command line application that formats most programming language files.</p>
+<h2 id="why-ucf">Why ucf</h2>
+<p>Each programming / markup language has a different formatting tool with different command line flags and different behaviours. The burden of selecting a tool and calling it with the right parameters lies on the IDE or the end user. UCF takes that on to itself. So, without UCF</p>
+<pre tabindex="0"><code>black code1.py
+gofmt -w code2.go
+rustfmt code3.rs
+prettier -w code4.html
+clang-format -i code5.cpp
+</code></pre><p>With UCF</p>
+<pre tabindex="0"><code>ucf code1.py
+ucf code2.go
+ucf code3.rs
+ucf code4.html
+ucf code5.cpp
+</code></pre><h2 id="installation">Installation</h2>
+<h3 id="with-cargo">With cargo</h3>
+<pre tabindex="0"><code>cargo install ucf
+</code></pre><h3 id="aur">AUR</h3>
+<pre tabindex="0"><code>yay -S ucf
+</code></pre><h2 id="working">Working</h2>
+<p>Under the hood, <code>ucf</code> is a simple program. It determines the file extension of the file and calls the appropriate code formatter with appropriate arguments. The called code formatter should be present in the system&rsquo;s <code>$PATH</code>.</p>
 ]]></content:encoded>
     </item>
     

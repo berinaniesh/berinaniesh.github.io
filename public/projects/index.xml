@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Berin&#39;s Webpage</title>
-    <link>https://berinaniesh.github.io/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in Projects on Berin&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bible Web 2</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-2/</link>
+      <link>http://localhost:1313/projects/bible-web-2/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/projects/bible-web-2/</guid>
+      <guid>http://localhost:1313/projects/bible-web-2/</guid>
       <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://gitlab.com/scripture/scripture.gitlab.io&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Deployed at: &lt;a href=&#34;https://scripture.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is an alternate frontend to the &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt; in which everything is generated prior and the whole site is served as static content.&lt;/p&gt;
-&lt;p&gt;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-web-1/&#34;&gt;Bible Web 1&lt;/a&gt; (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.&lt;/p&gt;</description>
+&lt;p&gt;This is an alternate frontend to the &lt;a href=&#34;http://localhost:1313/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt; in which everything is generated prior and the whole site is served as static content.&lt;/p&gt;
+&lt;p&gt;The objective here is to provide a featureful and book like reading experience. Though the site is not as fast as &lt;a href=&#34;http://localhost:1313/projects/bible-web-1/&#34;&gt;Bible Web 1&lt;/a&gt; (which is due to prefetching and fetching on hover) the site is still very fast, responsive and serves it&amp;rsquo;s purpose well.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://gitlab.com/scripture/scripture.gitlab.io">Link</a></p>
 <p>Deployed at: <a href="https://scripture.berinaniesh.xyz">Link</a></p>
 <p>This is an alternate frontend to the <a href="/projects/bible-api/">bible-api</a> in which everything is generated prior and the whole site is served as static content.</p>
@@ -38,13 +38,13 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
     
     <item>
       <title>Bible Web 1</title>
-      <link>https://berinaniesh.github.io/projects/bible-web-1/</link>
+      <link>http://localhost:1313/projects/bible-web-1/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/projects/bible-web-1/</guid>
+      <guid>http://localhost:1313/projects/bible-web-1/</guid>
       <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-web&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Deployed at: &lt;a href=&#34;https://bible.berinaniesh.xyz&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a frontend to the &lt;a href=&#34;https://berinaniesh.github.io/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt;, written using SvelteKit and TailwindCSS.&lt;/p&gt;
+&lt;p&gt;This is a frontend to the &lt;a href=&#34;http://localhost:1313/projects/bible-api/&#34;&gt;bible-api&lt;/a&gt;, written using SvelteKit and TailwindCSS.&lt;/p&gt;
 &lt;p&gt;The objective is to provide a minimal UI to read The Bible. The application is very fast and responsive and is deployed on a linux server.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/bible-web">Link</a></p>
 <p>Deployed at: <a href="https://bible.berinaniesh.xyz">Link</a></p>
@@ -55,10 +55,10 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
     
     <item>
       <title>Bible API</title>
-      <link>https://berinaniesh.github.io/projects/bible-api/</link>
+      <link>http://localhost:1313/projects/bible-api/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/projects/bible-api/</guid>
+      <guid>http://localhost:1313/projects/bible-api/</guid>
       <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/bible-api&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Deployed at: &lt;a href=&#34;https://api.bible.berinaniesh.xyz/docs&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bible API as the name implies, is an API server which serves bible verses over REST endpoints. To avoid licensing issues, only bibles in the Public Domain are available.&lt;/p&gt;
@@ -86,10 +86,10 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
     
     <item>
       <title>Server Jukebox</title>
-      <link>https://berinaniesh.github.io/projects/server-jukebox/</link>
+      <link>http://localhost:1313/projects/server-jukebox/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/projects/server-jukebox/</guid>
+      <guid>http://localhost:1313/projects/server-jukebox/</guid>
       <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/server-jukebox&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Server Jukebox, as the name implies is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Jukebox&#34;&gt;jukebox&lt;/a&gt; for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.&lt;/p&gt;
 &lt;p&gt;It uses &lt;code&gt;yt-dlp&lt;/code&gt; to download audio and &lt;code&gt;mpv&lt;/code&gt; to play the downloaded audio. It also uses a &lt;code&gt;mariadb&lt;/code&gt; database to keep state.&lt;/p&gt;
@@ -104,7 +104,7 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
 &lt;/ul&gt;
 &lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
 &lt;h3 id=&#34;web-ui&#34;&gt;Web UI&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://berinaniesh.github.io/server_jukebox1.png&#34; type=&#34;&#34; alt=&#34;Screenshot1&#34;  /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/server_jukebox1.png&#34; type=&#34;&#34; alt=&#34;Screenshot1&#34;  /&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Git Repo: <a href="https://github.com/berinaniesh/server-jukebox">Link</a></p>
 <p>Server Jukebox, as the name implies is a <a href="https://en.wikipedia.org/wiki/Jukebox">jukebox</a> for a server (no coins needed though :P). It allows anyone on the local network (or the internet) to queue songs to be played on the server.</p>
 <p>It uses <code>yt-dlp</code> to download audio and <code>mpv</code> to play the downloaded audio. It also uses a <code>mariadb</code> database to keep state.</p>
@@ -127,10 +127,10 @@ The script can be found <a href="https://gitlab.com/scripture/scripture.gitlab.i
     
     <item>
       <title>Universal Code Formatter</title>
-      <link>https://berinaniesh.github.io/projects/ucf/</link>
+      <link>http://localhost:1313/projects/ucf/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/projects/ucf/</guid>
+      <guid>http://localhost:1313/projects/ucf/</guid>
       <description>&lt;p&gt;Git Repo: &lt;a href=&#34;https://github.com/berinaniesh/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Crates.io: &lt;a href=&#34;https://crates.io/crates/ucf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Universal Code Formatter (UCF) is a command line application that formats most programming language files.&lt;/p&gt;

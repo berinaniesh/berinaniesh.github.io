@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>List of Blog Posts on Berin&#39;s Webpage</title>
-    <link>https://berinaniesh.github.io/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in List of Blog Posts on Berin&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://berinaniesh.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MNIST Benchmarks (CPU vs GPU / Tensorflow vs Pytorch)</title>
-      <link>https://berinaniesh.github.io/blog/mnist_benchmarks/</link>
+      <link>http://localhost:1313/blog/mnist_benchmarks/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://berinaniesh.github.io/blog/mnist_benchmarks/</guid>
+      <guid>http://localhost:1313/blog/mnist_benchmarks/</guid>
       <description>&lt;p&gt;I got ROCm to work on my laptop and guess what that means, benchmarks!&lt;/p&gt;
 &lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
 &lt;ul&gt;
