@@ -17,8 +17,10 @@ favicon = "/favicon.ico"
 enabled = true
 title = "Berin Aniesh"
 subtitle = "Software Engineer"
-#imageUrl = "/profile.jpg"
-#imageTitle = "Profile Pic"
+imageUrl = "berinaniesh.png"
+imageTitle = "Berin Aniesh"
+imageWidth = 150
+imageHeight = 150
 
 [[params.profileMode.buttons]]
 name = "About"
